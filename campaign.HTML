@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donation - Lilo – Code & Kindness</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', cursive;
+      background: linear-gradient(180deg, #4CAF50, #6edb76, #a5f2b0);
+      color: white;
+      text-align: center;
+    }
+ nav {
+      background: rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(6px);
+      padding: 1rem 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+      font-size: 0.7rem;
+      transition: transform 0.2s ease;
+    }
+
+    nav a:hover {
+      transform: scale(1.1);
+      text-decoration: underline;
+    }
+    
+    header {
+      padding: 2rem;
+      background: linear-gradient(180deg, #4CAF50, #6edb76, #a5f2b0);
+      animation: fadeInDown 1s ease;
+    }
+
+    header img.logo {
+      max-width: 150px;
+      vertical-align: middle;
+      border-radius: 10px;
+      transition: transform 0.4s ease;
+      animation: fadeInDown 1s ease;
+      image-rendering: pixelated;
+    }
+
+    header img.logo:hover {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+
+    .container {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease;
+      width: 100%;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .campaign-img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .qr {
+      margin: 1rem auto;
+      max-width: 200px;
+    }
+    .qr img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    #progress-container {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      overflow: hidden;
+      height: 24px;
+      margin: 1rem 0 0.5rem 0;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    #progress-bar {
+      background: #57b23f;
+      height: 100%;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    footer {
+      padding: 1rem;
+      font-size: 0.8rem;
+      background: linear-gradient(0deg, #4CAF50, #6edb76, #a5f2b0);
+      animation: fadeIn 1.2s ease;
+      margin-top: 3rem;
+    }
+
+    ul#transaction-list {
+      font-size: 0.7rem;
+      text-align: left;
+      padding-left: 0;
+      list-style: none;
+      max-height: 220px;
+      overflow-y: auto;
+    }
+
+    ul#transaction-list li {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 0.5rem;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #d0ffd0;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+    <nav>
+    <a href="index.html">About</a>
+<a href="campaign.html">Campaign</a>
+  </nav>
+  <header>
+    <img src="LILO.png" alt="Lilo the Pixel Dino" class="logo" />
+    <h1>Donation Campaign</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+  <h2 style="margin-bottom: 0.5rem; color: white;">
+   FOOD AND DRINK FOR THE HOMELESS
+  </h2>
+
+  <img src="campaign_image.png" alt="Campaign Image" class="campaign-img" />
+
+  <p style="margin-top: 0.5rem; font-weight: bold; color: white;">
+    Target: $1000 USD
+  </p>
+
+  <h2 style="margin-top: 2rem;">Scan & Donate via Solana</h2>
+
+  <div class="qr">
+    <img src="solana_qr.png" alt="Donate QR" />
+  </div>
+
+  <p><strong>Wallet Address:</strong><br>HQ4oZxUSsDLQM6zbZvxu9Rq16YuVEcecpz3iSTdma7sf</p>
+</div>
+
+    <div class="card">
+      <h2>Lilo Impact</h2>
+      <p><strong><span id="sol-balance">0</span> SOL</strong> (≈ $<span id="usd-balance">0</span>)</p>
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <p>Target: $1000 USD</p>
+    </div>
+
+    <div class="card">
+      <h2>📜 Donation History</h2>
+      <ul id="transaction-list">
+        <li>Loading transactions...</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Lilo – Code & Kindness. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const walletAddress = 'HQ4oZxUSsDLQM6zbZvxu9Rq16YuVEcecpz3iSTdma7sf';
+    const targetUSD = 1000;
+    let solPriceUSD = 0;
+
+    async function fetchSolPrice() {
+      try {
+        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd');
+        const data = await res.json();
+        solPriceUSD = data.solana.usd;
+      } catch (e) {
+        console.error('Gagal mengambil harga SOL:', e);
+        solPriceUSD = 20; // fallback kasar
+      }
+    }
+
+    async function fetchBalance() {
+      try {
+        const res = await fetch(`https://public-api.solscan.io/account/tokens?address=${walletAddress}`, { headers: { 'accept': 'application/json' } });
+        const tokens = await res.json();
+
+        // Ambil balance SOL (native token)
+        const solToken = tokens.find(t => t.tokenName === "SOL");
+        let balanceLamports = 0;
+        if (solToken) {
+          balanceLamports = solToken.amount;
+        } else {
+          // fallback ke API lain jika kosong (Solscan API kadang berbeda)
+          const res2 = await fetch(`https://public-api.solscan.io/account/info?address=${walletAddress}`);
+          const info = await res2.json();
+          balanceLamports = info.lamports || 0;
+        }
+
+        const balanceSOL = balanceLamports / 1e9;
+        const balanceUSD = (balanceSOL * solPriceUSD).toFixed(2);
+
+        document.getElementById('sol-balance').textContent = balanceSOL.toFixed(4);
+        document.getElementById('usd-balance').textContent = balanceUSD;
+
+        // Update progress bar
+        const progressPercent = Math.min((balanceUSD / targetUSD) * 100, 100);
+        document.getElementById('progress-bar').style.width = progressPercent + '%';
+
+      } catch (e) {
+        console.error('Gagal mengambil saldo:', e);
+      }
+    }
+
+    async function fetchTransactions() {
+      try {
+        const response = await fetch(`https://public-api.solscan.io/account/transactions?address=${walletAddress}&limit=5`, {
+          headers: { 'accept': 'application/json' }
+        });
+
+        const txData = await response.json();
+        const txList = document.getElementById('transaction-list');
+        txList.innerHTML = '';
+
+        txData.forEach(tx => {
+          let amountLamport = null;
+
+          if (tx.innerInstructions && tx.innerInstructions.length > 0) {
+            for (const instr of tx.innerInstructions) {
+              if (instr.parsed && instr.parsed.type === "transfer") {
+                amountLamport = instr.parsed.info.lamports;
+                break;
+              }
+            }
+          }
+
+          if (amountLamport === null && tx.meta && tx.meta.postBalances && tx.meta.preBalances) {
+            amountLamport = Math.abs(tx.meta.postBalances[0] - tx.meta.preBalances[0]);
+          }
+
+          const amountSOL = amountLamport ? (amountLamport / 1e9).toFixed(4) : "N/A";
+          const time = new Date(tx.blockTime * 1000).toLocaleString();
+          const link = `https://solscan.io/tx/${tx.txHash}`;
+
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <strong>${amountSOL} SOL</strong> — ${time}<br>
+            <a href="${link}" target="_blank" rel="noopener">Lihat di Solscan</a>
+          `;
+          txList.appendChild(li);
+        });
+
+      } catch (error) {
+        console.error('Failed to load transaction:', error);
+        document.getElementById('transaction-list').innerHTML = '<li>Failed to load transaction.</li>';
+      }
+    }
+
+    async function updateAll() {
+      await fetchSolPrice();
+      await fetchBalance();
+      await fetchTransactions();
+    }
+
+    updateAll();
+    setInterval(updateAll, 5 * 60 * 1000);
+  </script>
+</body>
+</html>

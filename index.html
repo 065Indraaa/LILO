@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lilo – Code & Kindness</title>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', cursive;
+      background: linear-gradient(180deg, #4CAF50, #6edb76, #a5f2b0);
+      color: white;
+      text-align: center;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(6px);
+      padding: 1rem 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+      font-size: 0.7rem;
+      transition: transform 0.2s ease;
+    }
+
+    nav a:hover {
+      transform: scale(1.1);
+      text-decoration: underline;
+    }
+
+    header {
+      padding: 2rem;
+      background: linear-gradient(180deg, #4CAF50, #6edb76, #a5f2b0);
+      animation: fadeInDown 1s ease;
+    }
+
+    header img {
+      max-width: 150px;
+      vertical-align: middle;
+      border-radius: 10px;
+      transition: transform 0.4s ease;
+      animation: fadeInDown 1s ease;
+      image-rendering: pixelated;
+    }
+
+    header img:hover {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+
+    .container {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+      padding: 1.5rem;
+      max-width: 600px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+
+    .lilo-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .lilo-section img {
+      max-width: 200px;
+    }
+
+    footer {
+      padding: 1rem;
+      font-size: 0.8rem;
+      background: linear-gradient(0deg, #4CAF50, #6edb76, #a5f2b0);
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Improve font visibility */
+    body,
+    header h1,
+    header p,
+    .card h2,
+    .card p,
+    footer,
+    nav a {
+      color: #ffffff;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">About</a>
+<a href="campaign.html">Campaign</a>
+  </nav>
+
+  <header id="about">
+    <div class="lilo-section">
+      <img src="LILO.png" alt="Lilo the Pixel Dino">
+    </div>
+    <h1>Lilo – Code & Kindness</h1>
+    <p>Helping people in need, one pixel at a time.</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Who is Lilo?</h2>
+      <p>Lilo is our adorable pixel dinosaur mascot who’s on a mission to spread kindness and help those in need on the streets.</p>
+    </div>
+
+    <div class="card">
+      <h2>Our Mission</h2>
+      <p>We focus on donations to charities and direct aid to homeless individuals, providing them with meals, essentials, and hope.</p>
+    </div>
+
+    <div class="card" id="campaign">
+      <h2>Campaign</h2>
+      <p>Support our current donation campaigns to bring meals, care packages, and tech-driven help to those in need. Every small contribution counts!</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Lilo – Code & Kindness. All rights reserved.</p>
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('.card', {
+      duration: 1000,
+      origin: 'bottom',
+      distance: '50px',
+      easing: 'ease-out',
+      reset: false,
+      interval: 200
+    });
+  </script>
+</body>
+</html>
