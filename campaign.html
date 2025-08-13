@@ -12,23 +12,28 @@
       color: white;
       text-align: center;
     }
- nav {
+    nav {
       background: rgba(0, 0, 0, 0.15);
       backdrop-filter: blur(6px);
-      padding: 1rem 0.5rem;
+      padding: 1rem 2rem;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
       position: sticky;
       top: 0;
       z-index: 10;
     }
 
+    nav .logo {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
     nav a {
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
       font-size: 0.7rem;
+      margin-left: 1.5rem;
       transition: transform 0.2s ease;
     }
 
@@ -181,9 +186,12 @@
   </style>
 </head>
 <body>
-    <nav>
-    <a href="index.html">About</a>
-<a href="campaign.html">Campaign</a>
+  <nav>
+    <div class="logo">LILO</div>
+    <div>
+      <a href="index.html">About</a>
+      <a href="campaign.html">Campaign</a>
+    </div>
   </nav>
   <header>
     <img src="LILO.png" alt="Lilo the Pixel Dino" class="logo" />
